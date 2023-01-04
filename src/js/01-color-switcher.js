@@ -16,10 +16,12 @@ function onButtonStartClick(event) {
     timerId = setInterval(() => {
         let color = getRandomHexColor();
         bodyEl.style.backgroundColor = color;
-        buttonStartEl.disabled = event.target;
-        buttonStopEl.disabled = false;
+        
         
     }, 1000);
+
+    buttonStartEl.disabled = event.target;
+    buttonStopEl.disabled = false;
     
 };
 
