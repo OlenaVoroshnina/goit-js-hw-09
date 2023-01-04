@@ -17,20 +17,15 @@ function onButtonStartClick(event) {
         let color = getRandomHexColor();
         bodyEl.style.backgroundColor = color;
         buttonStartEl.disabled = event.target;
+        buttonStopEl.disabled = false;
         
     }, 1000);
-    // if (buttonStopEl.disabled) {
-    //     !buttonStopEl.disabled;
-    // };
-    buttonStartEl.disabled = !buttonStopEl.disabled;
+    
 };
 
 function onButtonStopClick(event) {
     clearInterval(timerId); 
     buttonStopEl.disabled = event.target;
-    // if (buttonStartEl.disabled) {
-    //     !buttonStartEl.disabled;
-    // };
-    buttonStopEl.disabled = !buttonStartEl.disabled;
+    buttonStartEl.disabled = false;
     
 };
