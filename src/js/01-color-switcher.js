@@ -15,19 +15,15 @@ buttonStopEl.addEventListener('click', onButtonStopClick);
 function onButtonStartClick(event) {
     timerId = setInterval(() => {
         let color = getRandomHexColor();
-        bodyEl.style.backgroundColor = color;
-        
-        
+        bodyEl.style.backgroundColor = color;  
     }, 1000);
 
     buttonStartEl.disabled = event.target;
-    buttonStopEl.disabled = false;
-    
+    buttonStopEl.disabled = false; 
 };
 
 function onButtonStopClick(event) {
     clearInterval(timerId); 
     buttonStopEl.disabled = event.target;
-    buttonStartEl.disabled = false;
-    
+    buttonStartEl.disabled = false;   
 };
