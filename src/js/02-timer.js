@@ -2,7 +2,7 @@
 import flatpickr from "flatpickr";
 // Дополнительный импорт стилей
 import "flatpickr/dist/flatpickr.min.css";
-
+import Notiflix from 'notiflix';
 
 
 
@@ -26,12 +26,11 @@ const options = {
   onClose(selectedDates) {
       console.log(selectedDates[0]);
       if (selectedDates[0] <= new Date) {
-          window.alert("Please choose a date in the future");
+        Notiflix.Notify.failure('Please choose a date in the future');
         
       } else {
         buttonStartEl.disabled = false;
-    }
-    
+    }  
   },
 };
 
